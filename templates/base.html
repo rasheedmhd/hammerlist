@@ -1,12 +1,15 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title> HammerList &#9996 </title>
+	<title> HammerList.com &#9996 </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 </head>
 <body>
 
 {% block header %}
-this is header from base.html
+<img src="{% static 'images/main/hammerlist logo.png' %}">
 {% endblock %}
 
 {% block main %}
