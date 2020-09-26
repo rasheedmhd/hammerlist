@@ -4,12 +4,24 @@
 <html>
 <head>
 	<title> HammerList.com &#9996 </title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base/headers.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
 </head>
 <body>
 
 {% block header %}
-<img src="{% static 'images/main/hammerlist logo.png' %}">
+<nav class="navbar">
+	<div class="container">
+		<a href="{% url 'home:home' %}"><img class="logo" src="{% static 'images/main/hammerlist logo.png' %}"></a>
+
+		<ul class="nav">
+			<li> <a href="{% url 'home:home' %}"> Home </a></li>
+			<li> <a href="{% url 'home:furnitures' %}"> Furnitures </a> </li>
+			<li> <a href=""> Categories </a> </li>
+		</ul>
+	</div>
+</nav>
 {% endblock %}
 
 {% block main %}

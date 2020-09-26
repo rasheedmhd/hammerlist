@@ -1,0 +1,47 @@
+:root {
+	--primary-color: #8A2387;
+	--mid-color: #E94057;
+	--secondary-color: #F27121;
+}
+
+.text-center {
+	text-align: center;
+	color: var(--mid-color);
+	margin-top: 3rem;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.banner {
+	width: 100%;
+	height: 73vh;
+	overflow: hidden;
+}
+
+.banner .slider-items .slider-item-1 {
+
+}
+
+.section-a .primary {
+	background: var(--primary-color);
+	height: 57vh;
+	width: 100%;
+	margin-top: 3rem;
+	border-radius: 10px;
+}
+
+.section-a .mid {
+	background: var(--mid-color);
+	height: 57vh;
+	width: 100%;
+	margin-top: 3rem;
+	border-radius: 10px;
+}
+
+.section-a .secondary {
+	background: var(--secondary-color);
+	height: 57vh;
+	margin-top: 3rem;
+	border-radius: 10px;
+}
+

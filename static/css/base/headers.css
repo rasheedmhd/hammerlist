@@ -1,0 +1,10 @@
+:root {
+	--primary-color: #8A2387;
+	--mid-color: #E94057;
+	--secondary-color: #F27121;
+}
+
+.nav {
+	color: var(--primary-color);
+	font-family: Heebo, 'Sans-serif'
+}

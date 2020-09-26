@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block main %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/index.css' %}">
+
+<section class="banner">
+	<div class="slider-items">
+		<img class="slider-item-1" src="{% static 'images/main/slider1.png' %}">
+		<!--<img class="slider-item-2" src="{% static 'images/main/slider2.png' %}">
+		<img class="slider-item-3" src="{% static 'images/main/slider3.png' %}">-->
+	</div>
+</section>
+
+<section class="category">
+	<a href=""><h1 class="text-center"> Shop by Category </h1> </a>
+</section>
+
+<section class="section-a">
+	<div class="container">
+		<div class="primary"></div>
+		<div class="mid"></div>
+		<div class="secondary"></div>
+	</div>
+</section>
+
+{% endblock %}

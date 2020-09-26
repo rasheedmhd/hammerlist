@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block main %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}">
+
+<h1> Furnitures Detail </h1>
+<div> 
+	<h1>{{ item.about }}</h1>
+
+	<div>
+		<p>{{ item.category }}</p>
+		<p>{{ item.seller }}</p>
+		<p>{{ item.price }}</p>
+		<p>{{ item.description }}</p>
+		<p>{{ item.material }}</p>
+		<p>{{ item.specifications }}</p>
+		<p>{{ item.created }}</p>
+		<p>{{ item.updated }}</p>
+	</div>
+
+	<br>
+</div>
+
+{% endblock %}
