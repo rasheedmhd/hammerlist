@@ -13,35 +13,69 @@
 }
 
 .banner {
-	width: 100%;
-	height: 73vh;
+	height: 83vh;
 	overflow: hidden;
 }
 
-.banner .slider-items .slider-item-1 {
 
+
+/* categories */
+.category-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 3rem;
+	align-items: center;
+	justify-content: center;
 }
 
-.section-a .primary {
+.category-items div {
+	margin-top: 3rem;
+	padding: 0 2rem 0 2rem;
+	border-radius: 10px;
 	background: var(--primary-color);
-	height: 57vh;
-	width: 100%;
-	margin-top: 3rem;
-	border-radius: 10px;
 }
 
-.section-a .mid {
-	background: var(--mid-color);
-	height: 57vh;
-	width: 100%;
-	margin-top: 3rem;
-	border-radius: 10px;
+.category-items div img:hover {
+	transform: translateY(-0.5em);
 }
 
-.section-a .secondary {
-	background: var(--secondary-color);
-	height: 57vh;
-	margin-top: 3rem;
-	border-radius: 10px;
+
+.category-items a div p {
+	color: white;
+	text-align: center;
 }
 
+
+/* Ads */
+.ads {
+
+}
+
+.container .ad-center  {
+	text-align: center;
+	margin-top: 3rem;
+	font-size: 1.2rem;
+}
+
+.container .ad-image {
+	margin-top: 2rem;
+	width: 220px;
+	height: 50px;
+}
+
+.container .ad-image:hover {
+	transform: translateY(-.5em);
+}
+
+.promo {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 3rem;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.promo .sellers img, .buyers img {
+	border-radius: 10px;
+}

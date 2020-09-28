@@ -3,23 +3,34 @@
 {% load static %}
 
 
+<!-- FURNITURES HOME PAGE -->
+
 {% block main %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/furnitures/index.css' %}">
 
-<h1> Furnitures Page </h1>
+<h1 class="text-center"> Browse all our Furniture Catalogue </h1>
 
-<div> 
-	<h1> Furniture Item</h1>
-	{% for item in furnitures %}
-	<div>
-		<p>{{ item.category }}</p>
-		<p>{{ item.seller }}</p>
-		<p>{{ item.price }}</p>
-		<p>{{ item.about }}</p>
-		<a href="{% url 'home:furniture_detail' item.pk %}"> Detail </a>
+<section class="search">
+	
+</section>
+
+<section id="container">
+
+	<div class="furnitures">
+		<div class="furniture-items"> 
+			{% for item in furnitures %}
+			<a href="{% url 'home:furniture_detail' item.pk %}">
+				<div class="furniture-info">
+					<img src="{% static 'assets/main/placeholder.jpg' %}">
+					<p class="about">{{ item.about }}</p>
+					<p>{{ item.category }}</p>
+					<p class="price"> GHS{{ item.price }}</p>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
 	</div>
-	{% endfor %}
-	<br>
-</div>
+
+</section>
 
 {% endblock %}

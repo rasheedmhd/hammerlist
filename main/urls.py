@@ -10,7 +10,7 @@ app_name = "home"
 
 urlpatterns = [
 	path('',  home, name="home"),
-	path('furnitures/categories/<str:slug>/', category, name="category"),
-	path('furnitures/', furnitures, name="furnitures"),
-	path('furnitures/details/<int:pk>/', furniture_detail.as_view(), name="furniture_detail"),
+	path('furniture/categories/<str:slug>/', category, name="category"),
+	path('furniture/', furnitures, name="furniture"),
+	path('furniture/details/<int:pk>/', furniture_detail.as_view(), name="furniture_detail"),
 ]

@@ -2,28 +2,82 @@
 
 {% load static %}
 
-
 {% block main %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/main/index.css' %}">
 
 <section class="banner">
-	<div class="slider-items">
-		<img class="slider-item-1" src="{% static 'images/main/slider1.png' %}">
-		<!--<img class="slider-item-2" src="{% static 'images/main/slider2.png' %}">
-		<img class="slider-item-3" src="{% static 'images/main/slider3.png' %}">-->
+	<div class="slider">
+		<img class="slider-item-1" src="{% static 'assets/main/banner.jpg' %}">
 	</div>
 </section>
 
-<section class="category">
+<section class="container">
 	<a href=""><h1 class="text-center"> Shop by Category </h1> </a>
-</section>
 
-<section class="section-a">
-	<div class="container">
-		<div class="primary"></div>
-		<div class="mid"></div>
-		<div class="secondary"></div>
+	<div class="category">
+		<div class="category-items"> 
+			<a href="">
+				<div class="category-item-1">
+					<img src="{% static 'assets/main/bed.png' %}">
+					<p> Beds </p>
+				</div>
+			</a>
+
+			<a href="">
+				<div class="category-item-1">
+					<img src="{% static 'assets/main/sofa.png' %}">
+					<p> Sofas & Couches </p>
+				</div>
+			</a>
+
+			<a href="">
+				<div class="category-item-1">
+					<img src="{% static 'assets/main/wardrobes.png' %}">
+					<p> Wardrobes </p>
+				</div>
+			</a>
+
+			<a href="">
+				<div class="category-item-1">
+					<img src="{% static 'assets/main/cabinets.png' %}">
+					<p> Cabinets </p>
+				</div>
+			</a>
+
+			<a href="">
+				<div class="category-item-1">
+					<img src="{% static 'assets/main/chairs.png' %}">
+					<p> Chairs </p>
+				</div>
+			</a>
+
+			<a href="">
+				<div class="category-item-1">
+					<img src="{% static 'assets/main/tv stand.png' %}">
+					<p> TV Stands </p>
+				</div>
+			</a>
+	
+		</div>
 	</div>
-</section>
 
+	<section class="promo">
+		<div class="sellers">
+			<img src="{% static 'assets/main/sellers.png' %}">
+		</div>
+		<div class="buyers">
+			<img src="{% static 'assets/main/buyers.png' %}">
+		</div>
+	</section>
+
+
+	<section class="ads">
+		<div class="ad-center">
+			<h1> Want you sell Your Masterpiece? </h1>
+			<p> Start Selling Now on HammerList.com </p>
+			<a href=""><img class="ad-image" src="{% static 'assets/main/ad.png' %}"></a>
+		</div>	
+	</section>
+
+</section>
 {% endblock %}
