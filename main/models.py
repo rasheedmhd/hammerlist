@@ -2,7 +2,15 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 
+from cloudinary.models import CloudinaryField
+
 Seller = get_user_model()
+
+class Picture(models.Model):
+    image = CloudinaryField('image')
+
+    def __str__(self):
+        return self.image.url
 
 class Category(models.Model):
     name = models.CharField(max_length=100, db_index=True)
@@ -24,7 +32,7 @@ class Furniture(models.Model):
 	category 		= models.ForeignKey(Category, on_delete=models.CASCADE)
 	seller 			= models.ForeignKey(Seller, on_delete=models.CASCADE)
 	price 			= models.CharField(max_length=6)
-	#picture 		= models.ForeignKey(Photo, on_delete=models.CASCADE)
+	picture 		= models.ForeignKey(Picture, on_delete=models.CASCADE, default=None, blank=True, null=True)
 	about 			= models.CharField(max_length=240)
 	description 	= models.TextField()
 	seats 			= models.IntegerField(null=True, blank=True)

@@ -10,6 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+
+# Cloudinary Configuration
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+cloudinary.config( 
+  cloud_name = "hlcloud", 
+  api_key = "878794759584714", 
+  api_secret = "nIRKIsCd65UGhFDiXQV0b2zKWYk" 
+)
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [

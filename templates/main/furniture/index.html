@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load cloudinary %}
 
 
 <!-- FURNITURES HOME PAGE -->
@@ -21,7 +22,7 @@
 			{% for item in furnitures %}
 			<a href="{% url 'home:furniture_detail' item.pk %}">
 				<div class="furniture-info">
-					<img src="{% static 'assets/main/placeholder.jpg' %}">
+					<img src="{{ item.picture.image.url }}">
 					<p class="about">{{ item.about }}</p>
 					<p>{{ item.category }}</p>
 					<p class="price"> GHS{{ item.price }}</p>
