@@ -44,3 +44,6 @@ class Furniture(models.Model):
 
 	def __str__(self):
 		return self.about
+
+	def amount(self):
+		return "GHS" + str(self.price)

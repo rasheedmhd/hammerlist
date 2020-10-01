@@ -4,14 +4,6 @@
 	--secondary-color: #F27121;
 }
 
-.text-center {
-	text-align: center;
-	color: var(--mid-color);
-	margin-top: 3rem;
-	font-weight: bold;
-	font-size: 2rem;
-}
-
 .banner {
 	height: 83vh;
 	overflow: hidden;
@@ -54,7 +46,10 @@
 .container .ad-center  {
 	text-align: center;
 	margin-top: 3rem;
-	font-size: 1.2rem;
+}
+
+.container .ad-center p {
+	font-size: 1rem;
 }
 
 .container .ad-image {
@@ -78,4 +73,32 @@
 
 .promo .sellers img, .buyers img {
 	border-radius: 10px;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+
+	.banner {
+		height: 100%;
+		width: 120%;
+		margin-left: -10%;
+		overflow: hidden;
+	}
+
+	.category-items {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 1rem;
+	}
+
+	.category-items div {
+		margin-top: 1rem;
+		padding: 0 1rem 0 1rem;
+		font-size: 1rem;
+	}
+
+	.promo {
+		grid-template-columns: repeat(1, 1fr);
+		margin-top: 3rem;
+	}
 }

@@ -1,0 +1,46 @@
+:root {
+	--primary-color: #8A2387;
+	--mid-color: #E94057;
+	--secondary-color: #F27121;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.highlights {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	justify-self: flex-end;
+}
+
+.highlights p {
+	border-radius: 10px;
+	border: 2px solid var(--primary-color);
+	padding-left: 1rem;
+}
+
+@media (max-width: 480px) {
+
+	.container {
+		width: 95%;
+	}
+
+	.text-center {
+		font-size: 1.5rem;
+	}
+
+
+	.highlights {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 1rem;
+	}
+
+	.highlights p {
+		margin-top: 1rem;
+	}
+}

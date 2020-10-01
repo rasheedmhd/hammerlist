@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block main %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/ads.css' %}">
+
+<section class="container">
+	<div class="ads">
+		<div class="left">
+			<div class="coming-soon">
+				<h1> Coming Soon...</h1>
+				<p> We are working on allowing you to post ads yourself for free.</p>
+			</div>
+			<div class="how-to">
+				<h2> How to List your Ad for Sale. </h2>
+				<ol>
+					<li> Click on the WhatsApp Link below </li>
+					<li> Tell us what you want to post.</li>
+					<li> We will tell you what to send us. </li>
+					<li> You send us the data. </li>
+					<li> We post it on the website. </li>
+					<li> Buyers buy from you. </li>
+					<li> Link: <a href="https://wa.me/message/ASTNZ6ZQTDZCF1"> Click Here!</a></li>
+				</ol>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="{% static 'assets/main/hero image.png' %}">
+		</div>
+	</div>	
+</section>
+{% endblock %}

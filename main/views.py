@@ -1,14 +1,18 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 
-from .models import Furniture
+from .models import Furniture, Category
 
 # Create your views here.
 def home(request):
 	return render(request, 'main/homepage.html')
 
+def ads(request):
+	return render(request, 'main/ads.html')
+
 def category(request):
-	return render(request, 'main/furniture/category.html')
+	categories = Category.objects.all()
+	return render(request, 'main/furniture/category.html', { 'categories': categories })
 
 def furnitures(request):
 	furnitures = Furniture.objects.all()

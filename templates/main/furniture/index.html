@@ -7,7 +7,7 @@
 <!-- FURNITURES HOME PAGE -->
 
 {% block main %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/furnitures/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/furniture/index.css' %}">
 
 <h1 class="text-center"> Browse all our Furniture Catalogue </h1>
 
@@ -25,7 +25,7 @@
 					<img src="{{ item.picture.image.url }}">
 					<p class="about">{{ item.about }}</p>
 					<p>{{ item.category }}</p>
-					<p class="price"> GHS{{ item.price }}</p>
+					<p class="price"> {{ item.amount }}</p>
 				</div>
 			</a>
 			{% endfor %}

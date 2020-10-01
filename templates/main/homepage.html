@@ -7,7 +7,7 @@
 
 <section class="banner">
 	<div class="slider">
-		<img class="slider-item-1" src="{% static 'assets/main/banner.jpg' %}">
+		<img src="{% static 'assets/main/banner.jpg' %}">
 	</div>
 </section>
 
@@ -61,6 +61,10 @@
 		</div>
 	</div>
 
+	<section>
+		<h1 class="text-center"> Why you should choose us.</h1>
+	</section>
+
 	<section class="promo">
 		<div class="sellers">
 			<img src="{% static 'assets/main/sellers.png' %}">
@@ -74,8 +78,8 @@
 	<section class="ads">
 		<div class="ad-center">
 			<h1> Want you sell Your Masterpiece? </h1>
-			<p> Start Selling Now on HammerList.com </p>
-			<a href=""><img class="ad-image" src="{% static 'assets/main/ad.png' %}"></a>
+			<p> Start Selling Now on HammerList.com  for free.</p>
+			<a href="{% url 'home:ads' %}"><img class="ad-image" src="{% static 'assets/main/ad.png' %}"></a>
 		</div>	
 	</section>
 

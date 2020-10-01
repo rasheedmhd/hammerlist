@@ -36,6 +36,13 @@ a {
 	overflow: hidden;
 }
 
+.text-center {
+	text-align: center;
+	color: var(--mid-color);
+	margin: 3rem;
+	font-weight: bold;
+	font-size: 3rem;
+}
 
 /* footer */
 .footer {
@@ -50,4 +57,11 @@ a {
 	color: white;
 	text-align: center;
 	height: 30vh;
+}
+
+@media (max-width: 480px) {
+	.text-center {
+		margin: 1rem;
+		font-size: 2rem;
+	}	
 }

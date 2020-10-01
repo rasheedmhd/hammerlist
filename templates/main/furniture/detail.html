@@ -5,25 +5,37 @@
 
 
 {% block main %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/furniture/detail.css' %}">
 
-<h1> Furnitures Detail </h1>
-<div> 
-	<h1>{{ item.about }}</h1>
+
+<section class="container">
+	<div> 
+	<h1 class="text-center">{{ item.about }}</h1>
 
 	<div>
-		<p>{{ item.picture.image.url }}</p>
-		<p>{{ item.category }}</p>
-		<p>{{ item.seller }}</p>
-		<p>{{ item.price }}</p>
+		<img src="{{ item.picture.image.url }}">
+		<br>
+
+		<div class="highlights">
+			<p>{{ item.category }}</p>
+			<p>{{ item.seller }}</p>
+			<p>{{ item.amount }}</p>
+			<p>{{ item.material }}</p>
+		</div>
+
+		<br>
+		<h2> Description: </h2>
 		<p>{{ item.description }}</p>
-		<p>{{ item.material }}</p>
+		<br>
+		<h2> Specifications: </h2>
 		<p>{{ item.specifications }}</p>
-		<p>{{ item.created }}</p>
-		<p>{{ item.updated }}</p>
+		<br>
+		<p><h2> Posted on: </h2>{{ item.created }}</p>
 	</div>
 
 	<br>
-</div>
+</div>	
+</section>
+
 
 {% endblock %}

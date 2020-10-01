@@ -1,0 +1,59 @@
+:root {
+	--primary-color: #8A2387;
+	--mid-color: #E94057;
+	--secondary-color: #F27121;
+}
+
+#container {
+	width: 80%;
+	margin: auto;
+	border: 1px solid var(--primary-color);
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* furnitures */
+.furnitures .furniture-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 2rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.furniture-items div {
+	color: black;
+}
+
+.furniture-info:hover {
+	background-color: #f2f5f6;
+	border-radius: 10px;
+}
+
+.furniture-items .furniture-info p {
+	padding: 0 1rem 0 1rem;
+}
+
+.furniture-items .furniture-info .about {
+	font-weight: bolder;
+}
+
+.furniture-items .furniture-info .price {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+
+	#container {
+		width: 95%;
+		padding: 0;
+	}
+
+	.furnitures .furniture-items {
+		grid-template-columns: repeat(1, 1fr);
+		align-items: center;
+		justify-content: center;
+	}
+
+}

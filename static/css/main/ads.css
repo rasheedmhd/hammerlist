@@ -1,0 +1,47 @@
+:root {
+	--primary-color: #8A2387;
+	--mid-color: #E94057;
+	--secondary-color: #F27121;
+}
+
+body {
+	color: white;
+}
+
+
+.left {
+	height: 73vh;
+	background: #8A2387;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	justify-self: flex-end;
+}
+
+.coming-soon h1 {
+	font-size: 4rem;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+@media (max-width: 480px) {
+	.left {
+		grid-template-columns: repeat(1, 1fr);
+		font-size: 1rem;
+	}	
+
+	.left div {
+		padding-left: 1rem;
+	}
+
+	.coming-soon h1 {
+		font-size: 3rem;
+	}
+}
