@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load cloudinary %}
+
+
+<!-- CATEGORISED PAGE -->
+
+{% block main %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/furniture/index.css' %}">
+
+<h1 class="text-center"> Find your favourites in this Category </h1>
+
+<section class="search">
+	
+</section>
+
+<section id="container">
+
+	<div class="furnitures">
+		<div class="furniture-items"> 
+			{% for item in object_list %}
+			<a href="{% url 'home:furniture_detail' item.pk %}">
+				<div class="furniture-info">
+					<img src="{{ item.picture.image.url }}">
+					<p class="about">{{ item.about }}</p>
+					<p>{{ item.category }}</p>
+					<p class="price"> {{ item.amount }}</p>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>
+
+{% endblock %}

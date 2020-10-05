@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block main %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/furniture/category.css' %}">
+
+<section class="container">
+
+	<h1 class="text-center"> All Categories </h1>
+
+	{% for category in categories %}
+		<p>
+			<a href="{% url 'home:ad_by_category' category.slug %}">{{ category.name }}</a>
+		</p>
+	{% endfor %}
+
+</section>
+
+
+{% endblock %}

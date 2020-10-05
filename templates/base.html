@@ -20,7 +20,7 @@
 		<ul class="nav">
 			<li> <a href="{% url 'home:home' %}"> Home </a></li>
 			<li> <a href="{% url 'home:furniture' %}"> Furniture </a> </li>
-			<li> <a href=""> Categories </a> </li>
+			<li> <a href="{% url 'home:category' %}"> Categories </a> </li>
 		</ul>
 	</div>
 </nav>
@@ -32,7 +32,7 @@
 {% block footer %}
 <section class="footer">
 	<div class="gradient"> 
-		<p>Coded with Passion by <a href="https://web.facebook.com/RasheedStarlet" target="_blank">StarLet</a></p>
+		<p>Coded with Passion by <a href="https://github.com/Virux" target="_blank">StarLet</a></p>
 	</div>
 </section>
 {% endblock %}
