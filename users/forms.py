@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+#from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
-class RegistrationForm(UserCreationForm):
+"""class RegistrationForm(UserCreationForm):
 	#
 	class Meta:
 		model = get_user_model()
@@ -11,4 +11,4 @@ class EditUserForm(UserChangeForm):
 	#
 	class Meta:
 		model = get_user_model()
-		fields = ('email', 'username',)
+		fields = ('email', 'username',)"""
