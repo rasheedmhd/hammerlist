@@ -9,7 +9,7 @@ class CustomUserManager(BaseUserManager):
 			raise ValueError("You must input your email")
 
 		user = self.model(
-			email = self.normalize_email('email'),
+			email = self.normalize_email(email),
 		)
 
 		user.set_password(password)
@@ -24,7 +24,6 @@ class CustomUserManager(BaseUserManager):
 		)
 
 		user.is_admin = True
-		user.set_password(password)
 		user.save(using=self._db)
 		return user
 
@@ -32,21 +31,24 @@ class CustomUserManager(BaseUserManager):
 # Create your models here.
 class CustomUser(AbstractBaseUser):
 	email = models.EmailField(
-		verbose_name="Email Address",
-		unique=True,
-	)
+        verbose_name='email address',
+        max_length=255,
+        unique=True,
+    )
+
+	objects 		= CustomUserManager()
 
 	username 		= models.CharField(max_length=255)
-	business_name 	= models.CharField(max_length=255)
+	business_name 	= models.CharField(max_length=255, blank=False, null=False)
 	first_name 		= models.CharField(max_length=255)
 	last_name 		= models.CharField(max_length=255)
 
 	is_active 		= models.BooleanField(default=True)
 	is_admin 		= models.BooleanField(default=False)
 
-	objects = CustomUserManager()
 
-	USERNAME_FIELD 	= 'email'
+	USERNAME_FIELD 	= "email"
+	#REQUIRED_FIELD = "business_name"
 
 	def _str_(self):
 		return self.business_name
@@ -60,4 +62,3 @@ class CustomUser(AbstractBaseUser):
 	@property
 	def is_staff(self):
 		return self.is_admin
-	
