@@ -9,16 +9,16 @@
 {% block main %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/furniture/index.css' %}">
 
-<h1 class="text-center"> Find your favourites in this Category </h1>
+<h1 class="text-center"> Find your favourites in this category </h1>
 
 <section class="search">
-	
+
 </section>
 
 <section id="container">
 
 	<div class="furnitures">
-		<div class="furniture-items"> 
+		<div class="furniture-items">
 			{% for item in object_list %}
 			<a href="{% url 'home:furniture_detail' item.pk %}">
 				<div class="furniture-info">

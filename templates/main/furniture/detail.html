@@ -9,8 +9,9 @@
 
 
 <section class="container">
-	<div> 
-	<h1 class="text-center">{{ item.about }}</h1>
+	<div>
+
+	<h1 class="text-center"> This masterpiece was made and sold by {{ item.seller.business_name }}. </h1>
 
 	<div>
 		<img src="{{ item.picture.image.url }}">
@@ -30,11 +31,11 @@
 		<h2> Specifications: </h2>
 		<p>{{ item.specifications }}</p>
 		<br>
-		<p><h2> Posted on: </h2>{{ item.created }}</p>
+		<p><h2> Posted on: </h2>{{ item.created }} </p>
 	</div>
 
 	<br>
-</div>	
+</div>
 </section>
 
 

@@ -22,7 +22,7 @@ img {
 
 ul {
 	list-style: none;
-} 
+}
 
 a {
 	color: var(--primary-color);
@@ -63,5 +63,5 @@ a {
 	.text-center {
 		margin: 1rem;
 		font-size: 2rem;
-	}	
+	}
 }
