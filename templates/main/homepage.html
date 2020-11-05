@@ -2,14 +2,17 @@
 
 {% load static %}
 
-{% block main %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/main/index.css' %}">
-
+{% block banner %}
 <section class="banner">
 	<div class="slider">
 		<img src="{% static 'assets/main/banner.jpg' %}">
 	</div>
 </section>
+{% endblock %}
+
+{% block main %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/index.css' %}">
+
 
 <section class="container">
 	<a href=""><h1 class="text-center"> Shop by Category </h1> </a>
@@ -79,7 +82,7 @@
 		<div class="ad-center">
 			<h1> Want you sell Your Masterpiece? </h1>
 			<p> Start Selling Now on Hammerfy.com for free.</p>
-			<a href="{% url 'home:ads' %}"><img class="ad-image" src="{% static 'assets/main/ad.png' %}"></a>
+			<a href="{% url 'main:create_ad' %}"><img class="ad-image" src="{% static 'assets/main/ad.png' %}"></a>
 		</div>
 	</section>
 

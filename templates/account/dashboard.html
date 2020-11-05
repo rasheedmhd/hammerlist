@@ -3,5 +3,11 @@
 {% load static %}
 
 {% block main %}
-<h1> Welcome to your Dashboard {{ user.username }} </h1>
+  <h1> Welcome to your Dashboard, {{ user.username }} </h1>
+
+  <form class="" action="{% url 'accounts:logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" name="logout"> Logout </button>
+  </form>
+
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block main %}
+create furniture
+
+<form class="create_ad_form" action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" name="create_ad" value="Post Ad">
+</form>
+
+
+{% endblock %}

@@ -12,15 +12,15 @@
 <h1 class="text-center"> Browse all our Furniture Catalogue </h1>
 
 <section class="search">
-	
+
 </section>
 
 <section id="container">
 
 	<div class="furnitures">
-		<div class="furniture-items"> 
-			{% for item in furnitures %}
-			<a href="{% url 'home:furniture_detail' item.pk %}">
+		<div class="furniture-items">
+			{% for item in furniture %}
+			<a href="{% url 'main:furniture_detail' item.pk %}">
 				<div class="furniture-info">
 					<img src="{{ item.picture.image.url }}">
 					<p class="about">{{ item.about }}</p>

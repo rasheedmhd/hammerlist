@@ -7,12 +7,13 @@
 /* Header */
 .nav {
 	color: var(--primary-color);
-	font-family: Heebo, 'Sans-serif'
+	font-family: Heebo, 'Sans-serif';
 }
 
 .navbar {
 	font-size: 1.2rem;
 	padding: 0.3rem 0 0.3rem 0;
+	background-color: #ffffff;
 }
 
 .navbar .container .logo {
@@ -38,6 +39,16 @@
 
 .navbar .nav a:hover {
 	color: var(--mid-color);
+}
+
+#post_ad {
+	background-color: var(--primary-color);
+	font-weight: bold;
+	border-radius: 7px;
+}
+
+#post_ad a {
+		color: white;
 }
 
 @media (max-width: 480px) {

@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .forms import LoginForm
 
@@ -13,7 +13,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect("users:dashboard")
+                    return redirect("accounts:dashboard")
                 else:
                     return HttpResponse("User account is disabled")
             else:
@@ -26,3 +26,8 @@ def user_login(request):
 @login_required()
 def user_dashboard(request):
     return render(request, 'account/dashboard.html')
+
+def logout(request):
+    if request.method == "POST":
+        logout(request)
+    return redirect("main:home")

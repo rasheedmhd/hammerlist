@@ -2,18 +2,29 @@
 	box-sizing: border-box;
 	margin:0;
 	padding:0;
+	font-size: 16px;
 }
 
 :root {
 	--primary-color: #8A2387;
 	--mid-color: #E94057;
 	--secondary-color: #F27121;
+	--background-color: #fbf4fd;
 }
 
 body {
 	font-family: Heebo, 'Sans-serif';
 	line-height: 1.6;
 	font-size:1.3rem;
+	background-color: var(--background-color);
+}
+
+#base_container {
+	width: 80%;
+	margin: auto;
+	margin-top: 3rem;
+	background-color: #ffffff;
+	padding: 1rem;
 }
 
 img {

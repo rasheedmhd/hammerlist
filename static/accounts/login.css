@@ -1,0 +1,77 @@
+#base_container {
+  background-color: var(--background-color);
+  margin-top: 1rem;
+}
+
+.login_logo {
+  margin: auto;
+  margin-top: 6rem;
+  text-align: center;
+  width: 50%;
+}
+
+.login_logo a img {
+  width: 240px;
+  height: 35px;
+}
+
+.login_container {
+  background: #ffffff;
+  border: 1px solid #e492fb;
+  border-radius: 3px;
+  width: 30%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.login_container h1 { text-align: center; font-size: 2rem;}
+
+.login_form p { padding: 1rem }
+
+#id_email, #id_password {
+  border: 1px solid #e492fb;
+  border-radius: 3px;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: var(--primary-color);
+  font-size: 14px;
+  line-height: 1.5715;
+  transition: all .3s;
+}
+
+.login_button {
+  border: 1px solid #e492fb;
+  border-radius: 3px;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  background: var(--primary-color);
+  font-size: 16px;
+  line-height: 1.5715;
+  color: #ffffff;
+}
+
+.password_reset { padding: 1rem;}
+
+.sign_up {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.sign_up p {
+  margin: 1rem;
+}
+
+.sign_up p a {
+  border: 1px solid #e492fb;
+  border-radius: 3px;
+  width: 80%;
+  min-width: 0;
+  padding: 4px 11px;
+  background: var(--primary-color);
+  font-size: 16px;
+  line-height: 1.5715;
+  color: #ffffff;
+}

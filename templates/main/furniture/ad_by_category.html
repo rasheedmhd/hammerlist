@@ -20,7 +20,7 @@
 	<div class="furnitures">
 		<div class="furniture-items">
 			{% for item in object_list %}
-			<a href="{% url 'home:furniture_detail' item.pk %}">
+			<a href="{% url 'main:furniture_detail' item.pk %}">
 				<div class="furniture-info">
 					<img src="{{ item.picture.image.url }}">
 					<p class="about">{{ item.about }}</p>

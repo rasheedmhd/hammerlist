@@ -17,10 +17,10 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-cloudinary.config( 
-  cloud_name = "hlcloud", 
-  api_key = "878794759584714", 
-  api_secret = "nIRKIsCd65UGhFDiXQV0b2zKWYk" 
+cloudinary.config(
+  cloud_name = "hlcloud",
+  api_key = "878794759584714",
+  api_secret = "nIRKIsCd65UGhFDiXQV0b2zKWYk"
 )
 
 from pathlib import Path
@@ -38,7 +38,7 @@ SECRET_KEY = '&dhmqvm%^kcjgq4p8(ngc(m9a@gkvdax#%n+x1yastmnjjo7*q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -136,6 +136,8 @@ USE_L10N = True
 USE_TZ = True
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+LOGIN_REDIRECT_URL = "accounts:login"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
