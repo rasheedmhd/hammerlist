@@ -26,8 +26,3 @@ def user_login(request):
 @login_required()
 def user_dashboard(request):
     return render(request, 'account/dashboard.html')
-
-def logout(request):
-    if request.method == "POST":
-        logout(request)
-    return redirect("main:home")
