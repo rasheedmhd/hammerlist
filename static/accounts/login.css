@@ -75,3 +75,7 @@
   line-height: 1.5715;
   color: #ffffff;
 }
+
+li, span {
+  display: none;
+}

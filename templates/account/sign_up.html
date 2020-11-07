@@ -13,22 +13,18 @@
 <link rel="stylesheet" href="{% static 'accounts/login.css' %}">
 
 <div class="login_container">
-  <h1> Log in </h1>
+  <h1> Sign up </h1>
   <form class="login_form" action="" method="post">
     {{ form.as_p }}
     {% csrf_token %}
-    <p><input class="login_button" type="submit" value="Log in"></p>
-    <input type="hidden" name="name" value="{{ next }}">
+    <p><input class="login_button" type="submit" value="Sign up"></p>
   </form>
-  <div class="password_reset">
-    <p><a href="{% url 'accounts:login' %}"> I forgot my password </a></p>
-  </div>
 </div>
 
 
 <div class="sign_up">
-  <p> Don't have an account?</p>
-  <p> <a href="{% url 'accounts:sign_up' %}"> Sign up for free! </a></p>
+  <p> Already have an account? </p>
+  <p> <a href="{% url 'accounts:login' %}"> Log in here! </a></p>
 </div>
 
 {% endblock %}
